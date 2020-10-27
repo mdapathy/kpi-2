@@ -8,7 +8,6 @@ namespace lab2
     public class Test
     {
 
-   
         [Test]
         public void Constructor_WithMaxUlong_ReturnsFalse()
         {
@@ -16,7 +15,6 @@ namespace lab2
 
             Assert.False(binaryFlag.GetFlag());
         }
-
 
         [Test]
         public void Constructor_WithZero_ThrowsException()
@@ -35,13 +33,11 @@ namespace lab2
             Assert.Fail("The ArgumentOutOfRangeException was not thrown.");
         }
 
-
         [Test]
         public void Constructor_With_1()
         {
             Assert.DoesNotThrow(() => new MultipleBinaryFlag(1, false));
         }
-
 
         [Test]
         public void Constructor_WithValidUlong()
@@ -49,15 +45,12 @@ namespace lab2
             Assert.DoesNotThrow(() => new MultipleBinaryFlag(115));
         }
 
-
-
         [Test]
         public void Get_ReturnsTrue()
         {
             MultipleBinaryFlag multipleBinaryFlag = new MultipleBinaryFlag(10, true);
             Assert.True(multipleBinaryFlag.GetFlag());
         }
-
 
         [Test]
         public void Get_ReturnsFalse()
@@ -84,7 +77,6 @@ namespace lab2
             Assert.Fail("The ArgumentOutOfRangeException was not thrown.");
         }
 
-
         [Test]
         public void Set_ValidPosition_GetReturnsFalse()
         {
@@ -95,7 +87,6 @@ namespace lab2
             Assert.False(multipleBinaryFlag.GetFlag());
 
         }
-
 
         [Test]
         public void Set_AllPositions_ReturnsTrue()
@@ -121,7 +112,6 @@ namespace lab2
             Assert.False(multipleBinaryFlag.GetFlag());
 
         }
-
 
         [Test]
         public void ResetFlag_GreaterThanLastIndex_ThrowsException()
